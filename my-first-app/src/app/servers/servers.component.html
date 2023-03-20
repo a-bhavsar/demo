@@ -1,0 +1,10 @@
+
+{{serverCreationStatus}}
+<input type="text" (input)="onUpdateServerName($event)" [(ngModel)]="serverName">
+<input type="text" [(ngModel)]="username" (input)="onchangeInput($event)">
+<p *ngIf="username">Hey there {{username}}</p>
+<!-- <p>{{serverName}}</p> -->
+<button class = "btn btn-primary" [disabled] = "!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<button class = "btn btn-primary"  [disabled]="!usernamePresence" (click)="resetUsername()">Reset Text</button>
+<p>{{usernamePresence}}</p>
+<p *ngFor="let server of servers">{{server}}</p>

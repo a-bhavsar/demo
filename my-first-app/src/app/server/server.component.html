@@ -1,0 +1,6 @@
+The Server Component
+<p [ngStyle]="{backgroundColor : getColor()}">Server is {{serverStatus}}</p>
+<p [ngClass]="{green : serverStatus==='online', red : serverStatus==='offline'}">Server is {{serverStatus}}</p>
+<p *ngIf="displayParagraph">Secret Password = Tuna</p>
+<button (click)="changeFlag()">Display Details</button>
+<p *ngFor="let counter of countArray; let i = index" [ngStyle]="{backgroundColor : i>4 ? 'blue' : 'white'}" [ngClass]="{blue : i>4 ? true : false}">{{counter}}</p>
