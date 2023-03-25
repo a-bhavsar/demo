@@ -1,0 +1,30 @@
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>
+            Email :
+            <input name="mail" type="email" ngModel email required id="email" #email="ngModel"/>
+        </label>
+    </div>
+    <div *ngIf="email.invalid && email.touched">Enter Valid email</div>
+    <div>
+        <label for="subscription">Subscription : </label>
+        <select name="subscription" ngModel id="subscription">
+            <option label="Basic" value="Basic">
+            <option label="Advanced" value="Advanced" selected>
+            <option label="Pro" value="Pro">
+        </select>
+    </div>
+    <div>
+        <label for="password">
+            Password :
+            <input name="password" type="text" ngModel required #password="ngModel"/>
+        </label>
+        <div *ngIf="password.invalid && password.touched">Enter Valid Password</div>
+    </div>
+    <div *ngIf="submitted">
+        <p>Username is {{user.username}}</p>
+        <p>Subscription is {{user.subscription}}</p>
+        <p>Password is {{user.password}}</p>
+    </div>
+    <button type="submit">Submit</button>
+</form>
