@@ -1,0 +1,1 @@
+{"ast":null,"code":"var AuthInterceptorService = /** @class */function () {\n  function AuthInterceptorService() {}\n  AuthInterceptorService.prototype.intercept = function (req, next) {\n    return next.handle(req);\n  };\n  return AuthInterceptorService;\n}();\nexport { AuthInterceptorService };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
