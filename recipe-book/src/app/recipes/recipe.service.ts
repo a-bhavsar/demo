@@ -9,12 +9,14 @@ export class RecipeService{
 
     recipesChanged = new Subject<Recipe[]>();
 
-    private recipes : Recipe[] = [
-        new Recipe('Fruit Salad', "This is a fruit Salad", "https://i.ytimg.com/vi/xffXCJM_rvU/maxresdefault.jpg", [new Ingredient("Apples", 12),
-        new Ingredient("Pomegrenate", 8)]),
-        new Recipe('Potato Wedges', "This are Potato Wedges", "https://www.shutterstock.com/image-photo/fried-potato-wedges-white-sauce-260nw-121911745.jpg", [new Ingredient("Potato", 20),
-        new Ingredient("Salt", 3)])
-    ];
+    // private recipes : Recipe[] = [
+    //     new Recipe('Fruit Salad', "This is a fruit Salad", "https://i.ytimg.com/vi/xffXCJM_rvU/maxresdefault.jpg", [new Ingredient("Apples", 12),
+    //     new Ingredient("Pomegrenate", 8)]),
+    //     new Recipe('Potato Wedges', "This are Potato Wedges", "https://www.shutterstock.com/image-photo/fried-potato-wedges-white-sauce-260nw-121911745.jpg", [new Ingredient("Potato", 20),
+    //     new Ingredient("Salt", 3)])
+    // ];
+
+    private recipes : Recipe[] = [];
 
     constructor(private shoppingListService : ShoppingListService){
 
